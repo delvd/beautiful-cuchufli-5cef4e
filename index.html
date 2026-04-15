@@ -271,8 +271,25 @@
     font-size:clamp(26px,4.6vw,52px);
     line-height:1.1;letter-spacing:-.01em;
   }
-  .section-head h2.stack{
-    line-height:1.05;
+  /* Profile section — poster numerals */
+  .poster{
+    display:flex;
+    gap:clamp(30px,6vw,90px);
+    align-items:flex-end;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:clamp(10px,2vw,24px);
+  }
+  .poster .stat{text-align:center}
+  .poster .stat .n{
+    font-size:clamp(72px,12vw,160px);
+    font-weight:200;line-height:.85;
+    font-variant-numeric:tabular-nums;letter-spacing:-.04em;
+    display:block;
+  }
+  .poster .stat .l{
+    font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
+    margin-top:14px;display:block;
   }
 
   /* ---------- Profile ---------- */
@@ -291,23 +308,23 @@
     border-top:1px solid var(--line);
     border-left:1px solid var(--line);
   }
-  .stat{
+  .stats .stat{
     padding:clamp(28px,5vw,56px) 16px;
     text-align:center;
     border-right:1px solid var(--line);
     border-bottom:1px solid var(--line);
     position:relative;
   }
-  .stat .idx{
+  .stats .stat .idx{
     position:absolute;top:10px;left:12px;
     font-size:9px;letter-spacing:.14em;color:var(--muted);
     font-variant-numeric:tabular-nums;
   }
-  .stat .n{
+  .stats .stat .n{
     font-weight:300;font-size:clamp(36px,6vw,64px);
     line-height:1;margin-bottom:14px;letter-spacing:-.02em;
   }
-  .stat .l{
+  .stats .stat .l{
     font-size:9px;letter-spacing:.2em;text-transform:uppercase;
     color:var(--muted);
   }
@@ -491,7 +508,11 @@
   <div class="wrap">
     <div class="section-head">
       <div class="label"><span class="n">1</span>Profile</div>
-      <h2 class="stack">One discipline.<br>Two decades.<br>Three continents.</h2>
+      <div class="poster">
+        <div class="stat"><span class="n">1</span><span class="l">Discipline</span></div>
+        <div class="stat"><span class="n">2</span><span class="l">Decades</span></div>
+        <div class="stat"><span class="n">3</span><span class="l">Continents</span></div>
+      </div>
     </div>
     <p>Over twenty years leading technology and operations transformations — building businesses from the ground up, implementing enterprise systems at scale, and driving revenue growth across fashion, consumer goods, manufacturing and supply chain.</p>
     <p>The sweet spot is where operational complexity outpaces existing systems and strategic technology decisions decide whether a company scales or stalls. Bridging strategic vision and operational execution — fluent in both languages.</p>
